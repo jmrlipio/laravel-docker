@@ -1,0 +1,17 @@
+# Check docker status
+sudo systemctl status docker
+
+# Enable docker
+sudo systemctl enable --now docker
+
+# build docker
+docker-compose up -d --build
+
+# down docker
+docker-compose down
+
+# run artisan command in docker
+dc run --rm artisan migrate
+
+# get ip address of container
+docker inspect CONTAINER_ID | grep "IPAddress"
