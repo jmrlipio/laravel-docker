@@ -6,7 +6,7 @@ networks:
 services:
   site:
     image: nginx:stable-alpine
-    container_name: nginx_69verse
+    container_name: nginx
     ports:
       - "8080:80"
     volumes:
@@ -20,7 +20,7 @@ services:
 
   mysql:
     image: mysql:5.7.29
-    container_name: mysql_69verse
+    container_name: mysql
     restart: unless-stopped
     tty: true
     ports:
@@ -39,7 +39,7 @@ services:
     build:
       context: .
       dockerfile: php.dockerfile
-    container_name: php_69verse
+    container_name: php
     volumes:
       - ./src:/var/www/html:delegated
     ports:
@@ -49,7 +49,7 @@ services:
 
   composer:
     image: composer:latest
-    container_name: composer_69verse
+    container_name: composer
     volumes:
       - ./src:/var/www/html
     working_dir: /var/www/html
@@ -61,7 +61,7 @@ services:
 
   npm:
     image: node:13.7
-    container_name: npm_69verse
+    container_name: npm
     volumes:
       - ./src:/var/www/html
     working_dir: /var/www/html
@@ -71,7 +71,7 @@ services:
     build:
       context: .
       dockerfile: php.dockerfile
-    container_name: artisan_69verse
+    container_name: artisan
     volumes:
       - ./src:/var/www/html:delegated
     depends_on:
