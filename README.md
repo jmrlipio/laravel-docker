@@ -3,11 +3,17 @@ A docker wrapper for Laravel with NPM, ARTISAN & COMPOSER command
 
 1. Create src & mysql folder after cloning this repo.
 2. Src folder should contain the laravel files
-3. Mysql in docker-compose should be the same in laravel's .env setting
+3. Mysql in docker-compose should be the same in laravel's .env settings
+
+
 ie:
+
 -> DB_CONNECTION=mysql
+
 -> DB_HOST=mysql
+
 -> DB_PORT=3306
+
 # Commands:
 ### Check docker status
 
