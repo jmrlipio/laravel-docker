@@ -2,7 +2,7 @@
 A docker wrapper for Laravel with NPM, ARTISAN & COMPOSER command
 
 1. Create src & mysql folder after cloning this repo.
-2. src contains laravel folders
+2. Src folder should contain the laravel files
 
 # Commands:
 ### Check docker status
